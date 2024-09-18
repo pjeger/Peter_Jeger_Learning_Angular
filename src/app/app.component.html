@@ -5,14 +5,15 @@
   <title>Peter Jeger Learning Angular</title>
 </head>
 <body>
-  <h1>
-    {{ title }}
-  </h1>
-  <h3>
-    {{ date }}
-  </h3>
-  <p>
-    {{ paragraph }}
-  </p>
+  <div class="container">
+    <h2>Smite 2 Gods List</h2>
+    <div *ngFor="let smiteTwoGod of smiteTwoGodList" class="vg-card">
+      <h3>{{smiteTwoGod.name}}</h3>
+      <h4>{{smiteTwoGod.pantheon}}</h4>
+      <p>{{smiteTwoGod.class}}</p>
+      <p>{{smiteTwoGod.releaseDate}}</p>
+      <p *ngIf="smiteTwoGod.kitChanges">Received changes</p>
+    </div>
+  </div>
 </body>
 </html>
