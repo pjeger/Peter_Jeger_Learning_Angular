@@ -25,3 +25,4 @@ export class AppComponent {
   smiteTwoGodList: smiteTwoGod[] =
     [this.smiteTwoGod1, this.smiteTwoGod2, this.smiteTwoGod3, this.smiteTwoGod4, this.smiteTwoGod5, this.smiteTwoGod6]
 }
+
