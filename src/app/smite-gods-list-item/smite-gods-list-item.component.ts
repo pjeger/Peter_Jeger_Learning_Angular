@@ -10,4 +10,5 @@ import {smiteTwoGod} from "../smiteTwoGod";
 })
 export class SmiteGodsListItemComponent {
   @Input() smiteTwoGod?: smiteTwoGod;
+  smiteTwoGodList: any;
 }
