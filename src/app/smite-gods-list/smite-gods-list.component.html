@@ -1,4 +1,1 @@
-<app-smite-gods-list-item [smiteTwoGod]="smiteTwoGod3"></app-smite-gods-list-item>
-<app-smite-gods-list-item [smiteTwoGod]="smiteTwoGod4"></app-smite-gods-list-item>
-<app-smite-gods-list-item [smiteTwoGod]="smiteTwoGod5"></app-smite-gods-list-item>
-<app-smite-gods-list-item [smiteTwoGod]="smiteTwoGod6"></app-smite-gods-list-item>
+<app-smite-gods-list-item *ngFor='let smiteTwoGod of smiteTwoGodList; let index = index'  [smiteTwoGod]="smiteTwoGod" [ngClass]="{'even':index % 2 == 0, 'odd':index % 2 !=0}"></app-smite-gods-list-item>
