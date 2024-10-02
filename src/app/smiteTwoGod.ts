@@ -1,4 +1,5 @@
 export interface smiteTwoGod {
+  id: number,
   name: string,
   pantheon: string,
   class: string,
