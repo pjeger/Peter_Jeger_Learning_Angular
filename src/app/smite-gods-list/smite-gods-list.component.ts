@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {smiteTwoGod} from "../smiteTwoGod";
-import {smiteTwoGodList} from "../Shared/Models/mock-smiteTwoGod";
 import {SmiteGodsListItemComponent} from "../smite-gods-list-item/smite-gods-list-item.component";
 import {NgClass, NgForOf} from "@angular/common";
-import {SmiteTwoGodService} from "../smite-two-god.service";
+import {SmiteTwoGodService} from "../Services/smite-two-god.service";
 
 @Component({
   selector: 'app-smite-gods-list',
+  templateUrl: './smite-gods-list.component.html',
   standalone: true,
   imports: [
     SmiteGodsListItemComponent,
     NgForOf,
     NgClass,
   ],
-  templateUrl: './smite-gods-list.component.html',
   styleUrl: './smite-gods-list.component.css'
 })
 
@@ -23,7 +22,7 @@ export class SmiteGodsListComponent implements OnInit{
   constructor (private smiteTwoGodService: SmiteTwoGodService) {
   }
 
-    ngOnInit(): void{
+    ngOnInit(){
       this.smiteTwoGodService.getSmiteTwoGod().subscribe({
         next: (data: smiteTwoGod[]) => this.smiteTwoGodList = data,
         error: err => console.error("Error fetching Smite Two God", err),

@@ -1,1 +1,7 @@
-<app-smite-gods-list-item *ngFor='let smiteTwoGod of smiteTwoGodList; let index = index'  [smiteTwoGod]="smiteTwoGod" [ngClass]="{'even':index % 2 == 0, 'odd':index % 2 !=0}"></app-smite-gods-list-item>
+<div *ngFor="let god of smiteTwoGodList; let index = index" [ngClass]="{'even': index % 2 == 0, 'odd': index % 2 != 0}">
+  <app-smite-gods-list-item [smiteTwoGod]="god"></app-smite-gods-list-item>
+</div>
+
+
+
+
