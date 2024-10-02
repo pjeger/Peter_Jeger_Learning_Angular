@@ -17,9 +17,17 @@ import {SmiteTwoGodService} from "../smite-two-god.service";
 })
 
 export class SmiteGodsListComponent {
+  smiteTwoGodList: smiteTwoGod[] = [];
 
   constructor (private smiteTwoGodService: SmiteTwoGodService) {
   }
 
+  ngOnInit(): void{
+    this.smiteTwoGodService.getSmiteTwoGod().subscribe({
+      next: (data: smiteTwoGod[]) => this.smiteTwoGodList = data,
+      error: err => console.error("Error fetching Smite Two God", err),
+      complete:() => console.log("Smite Two God data fetch complete!")
+    })
+  }
 }
 
