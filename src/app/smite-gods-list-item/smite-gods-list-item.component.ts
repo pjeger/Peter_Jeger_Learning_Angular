@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {smiteTwoGod} from "../smiteTwoGod";
+import {smiteTwoGodList} from "../Shared/Models/mock-smiteTwoGod";
 
 @Component({
   selector: 'app-smite-gods-list-item',
@@ -10,5 +11,6 @@ import {smiteTwoGod} from "../smiteTwoGod";
 })
 export class SmiteGodsListItemComponent {
   @Input() smiteTwoGod?: smiteTwoGod;
+  @Input() smiteTwoGods?: smiteTwoGod[];
   smiteTwoGodList: any;
 }

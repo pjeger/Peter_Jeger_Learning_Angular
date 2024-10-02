@@ -1,5 +1,4 @@
 import {smiteTwoGod} from "../../smiteTwoGod";
-import {SmiteGodsListComponent} from "../../smite-gods-list/smite-gods-list.component";
 
 export const smiteTwoGodList: smiteTwoGod[] = [
   {id: 1, name: "Neith", pantheon: "Egyptian", class: "Hunter", kitChanges: true, releaseDate: "27/08/2024"},
