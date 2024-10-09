@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {smiteTwoGod} from "./smiteTwoGod"
  import {SmiteGodsListComponent} from "./smite-gods-list/smite-gods-list.component";
@@ -10,7 +10,7 @@ import {smiteTwoGodList} from "./Shared/Models/mock-smiteTwoGod";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, SmiteGodsListComponent, SmiteGodsListItemComponent, NgClass],
+  imports: [RouterOutlet, NgForOf, NgIf, SmiteGodsListComponent, SmiteGodsListItemComponent, NgClass, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

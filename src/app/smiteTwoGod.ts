@@ -4,5 +4,6 @@ export interface smiteTwoGod {
   pantheon: string,
   class: string,
   releaseDate: string,
-  kitChanges?: boolean
+  kitChanges?: boolean,
+  image?: string
 }
