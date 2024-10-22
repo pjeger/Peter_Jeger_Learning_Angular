@@ -43,6 +43,22 @@ export class AppComponent implements OnInit{
     });
   }
 
+  /* CLASS EXAMPLE
+  user = {
+    name: '',
+    email: ''
+  };
+
+  onSubmit(form: any){
+    if(form.valid){
+      console.log("Form Submitted Successfully", this.user);
+    }
+    else {
+      console.log("Form is not valid");
+    }
+  }
+   */
+
 }
 
 
