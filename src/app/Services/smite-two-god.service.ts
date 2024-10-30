@@ -12,26 +12,29 @@ export class SmiteTwoGodService {
 
   constructor() { }
 
+  //CRUD OPERATIONS
 getSmiteTwoGod(): Observable<smiteTwoGod[]>{
-  return of(smiteTwoGodList);
+  return of(this.smiteTwoGods);
 }
-addSmiteTwoGod(newSmiteTwoGod:smiteTwoGod) : Observable<smiteTwoGod[]>{
+addSmiteTwoGod(newSmiteTwoGod:smiteTwoGod) : Observable<smiteTwoGod>{
     this.smiteTwoGods.push(newSmiteTwoGod)
-    return of(this.smiteTwoGods);
+    return of(newSmiteTwoGod);
 }
-updateSmiteTwoGods(updatedSmiteTwoGod:smiteTwoGod): Observable<smiteTwoGod[]> {
-    const index = this.smiteTwoGods.findIndex((smiteTwoGod) => smiteTwoGod.id == updatedSmiteTwoGod.id)
-    if (index !== -1){
+updateSmiteTwoGods(updatedSmiteTwoGod:smiteTwoGod): Observable<smiteTwoGod | undefined> {
+    const index = this.smiteTwoGods.findIndex(smiteTwoGod => smiteTwoGod.id == updatedSmiteTwoGod.id)
+    if (index > -1){
       this.smiteTwoGods[index] = updatedSmiteTwoGod;
+      return of(updatedSmiteTwoGod);
     }
-    return of(this.smiteTwoGods);
+    return of(updatedSmiteTwoGod);
 }
-deleteSmiteTwoGod(smiteTwoGodId: number): Observable<smiteTwoGod[]> {
-    this.smiteTwoGods = this.smiteTwoGods.filter(smiteTwoGod => smiteTwoGod.id !== smiteTwoGodId);
-    return of(this.smiteTwoGods);
+deleteSmiteTwoGod(smiteTwoGodId: number): void {
+    this.smiteTwoGods = this.smiteTwoGods.filter((smiteTwoGod => smiteTwoGod.id !== smiteTwoGodId))
 }
 getSmiteTwoGodById(smiteTwoGodId: number): Observable<smiteTwoGod | undefined> {
-    const smiteTwoGod = this.smiteTwoGods.find(smiteTwoGod2 => smiteTwoGod2.id == smiteTwoGodId);
-    return of(smiteTwoGod)
+    return of(this.smiteTwoGods.find(smiteTwoGod => smiteTwoGod.id === smiteTwoGodId))
+}
+generateNewId(): number {
+    return this.smiteTwoGods.length > 0 ? Math.max(...this.smiteTwoGods.map(smiteTwoGod => smiteTwoGod.id)) + 1 : 1;
 }
 }

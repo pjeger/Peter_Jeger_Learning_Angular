@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'smiteTwoGods', component: SmiteGodsListComponent},
   {path: 'smiteTwoGods/:id', component: SmiteGodsListItemComponent},
   {path: 'modify-list-item', component: ModifyListItemComponent},
-  {path: '**', component:PageNotFoundComponent}
+  {path: '**', component:PageNotFoundComponent},
 ];
 
 bootstrapApplication(AppComponent, {
