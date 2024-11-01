@@ -3,6 +3,7 @@ import {smiteTwoGod} from "../smiteTwoGod";
 import {NgOptimizedImage} from "@angular/common";
 import {ActivatedRoute, Router} from "@angular/router";
 import {SmiteTwoGodService} from "../Services/smite-two-god.service";
+import {smiteTwoGodList} from "../Shared/Models/mock-smiteTwoGod";
 
 
 @Component({
@@ -22,8 +23,13 @@ export class SmiteGodsListItemComponent {
   onEdit(): void {
     this.router.navigate(['/modify-list-item'])
   }
-  onDelete(): void {
-
+  onDelete(id?: number): void {
+    console.log(id)
+    for (let i=0;i<=smiteTwoGodList.length;i++){
+      if (smiteTwoGodList[i].id == id){
+        smiteTwoGodList.splice(i, 1);
+      }
+    }
   }
 
 }

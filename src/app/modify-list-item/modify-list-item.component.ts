@@ -40,14 +40,9 @@ export class ModifyListItemComponent {
 
   onSubmit(): void {
     const smiteTwoGod: smiteTwoGod = this.smiteTwoGodForm.value;
-
-    if(smiteTwoGod.id) {
-      const smiteTwoGod: smiteTwoGod = this.smiteTwoGodForm.value;
-    }else{
       const newId = this.smiteTwoGodService.generateNewId();
       smiteTwoGod.id = newId;
       this.smiteTwoGodService.addSmiteTwoGod(smiteTwoGod);
-    }
 
     this.router.navigate(['/smiteTwoGods']);
   }
