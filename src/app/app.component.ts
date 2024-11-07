@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {NgClass, NgForOf, NgIf} from "@angular/common";
-import {smiteTwoGod} from "./smiteTwoGod"
+import {smiteTwoGod} from "./Shared/Models/smiteTwoGod"
  import {SmiteGodsListComponent} from "./smite-gods-list/smite-gods-list.component";
 import {SmiteGodsListItemComponent} from "./smite-gods-list-item/smite-gods-list-item.component";
 import {SmiteTwoGodService} from "./Services/smite-two-god.service";
-import {smiteTwoGodList} from "./Shared/Models/mock-smiteTwoGod";
+import {smiteTwoGodList} from "./Shared/mock-smiteTwoGod";
 
 @Component({
   selector: 'app-root',
@@ -28,19 +28,15 @@ export class AppComponent implements OnInit{
     })
   }
 */
-  selectedGod: smiteTwoGod | undefined;
   constructor(private smiteTwoGodService: SmiteTwoGodService) {
   }
 
-  ngOnInit() {
-    this.getSelectedGod(2);
-  }
+  smiteTwoGod: smiteTwoGod | undefined;
 
-  getSelectedGod(id:number): void{
-    this.smiteTwoGodService.getSmiteTwoGodById(id).subscribe({
-      next: (god) => this.selectedGod = god,
-      error: err => console.error("Error fetching god by ID", err)
-    });
+  ngOnInit() {
+    this.smiteTwoGodService.getSmiteTwoGodById(0).subscribe((smiteTwoGod) =>{
+      this.smiteTwoGod = smiteTwoGod;
+    })
   }
 
 }

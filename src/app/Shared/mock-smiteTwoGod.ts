@@ -1,4 +1,4 @@
-import {smiteTwoGod} from "../../smiteTwoGod";
+import {smiteTwoGod} from "./Models/smiteTwoGod";
 
 export const smiteTwoGodList: smiteTwoGod[] = [
   {id: 1, name: "Neith", pantheon: "Egyptian", class: "Hunter", kitChanges: true, releaseDate: "27/08/2024", image: "https://cdn.discordapp.com/attachments/485262251792531465/1293415884563415050/image.png?ex=67074ae9&is=6705f969&hm=e0b132357027548a5d921809c94fd7eb84c6605ca40302dbea4a7fc471dd8ed1&"},

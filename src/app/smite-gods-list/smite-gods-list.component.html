@@ -1,7 +1,12 @@
-<div *ngFor="let god of smiteTwoGodList; let index = index" [ngClass]="{'even': index % 2 == 0, 'odd': index % 2 != 0}">
-  <app-smite-gods-list-item [smiteTwoGod]="god"></app-smite-gods-list-item>
+<div class="smite-god-container" *ngFor="let smiteTwoGod of smiteTwoGodList">
+  <h1>{{smiteTwoGod.name}}</h1>
+  <p>{{smiteTwoGod.id}}</p>
+  <p>{{smiteTwoGod.pantheon}}</p>
+  <p>{{smiteTwoGod.class}}</p>
+  <p>{{smiteTwoGod.releaseDate}}</p>
+  <p>Has kit changes?: {{smiteTwoGod.kitChanges}}</p>
+  <img src='{{smiteTwoGod.image}}' height="200px" width="200px" alt="{{smiteTwoGod.name}}">
+  <br>
+  <button type="button" (click)="edit()">Edit</button>
+  <button type="button" (click)="delete(smiteTwoGod.id)">Delete</button>
 </div>
-
-
-
-
