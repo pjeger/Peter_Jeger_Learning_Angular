@@ -1,8 +1,8 @@
 <div class="smite-god-container">
-    <h3>{{smiteTwoGod?.name}}</h3>
+    <h3>{{smiteTwoGod.name | titlecase}}</h3>
     <h4>{{smiteTwoGod?.pantheon}}</h4>
-    <p>{{smiteTwoGod?.class}}</p>
-    <p>{{smiteTwoGod?.releaseDate}}</p>
+    <p>{{smiteTwoGod?.class | uppercase}}</p>
+    <p>{{smiteTwoGod.releaseDate | date: 'mediumDate'}}</p>
     <img src = "{{smiteTwoGod?.image}}"width="200" height="300">
     <button type="button" (click)="onEdit()">Edit</button>
     <button type="button" (click)="onDelete(smiteTwoGod?.id)">Delete</button>

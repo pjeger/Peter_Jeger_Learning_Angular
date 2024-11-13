@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {smiteTwoGod} from "../Shared/Models/smiteTwoGod";
-import {NgOptimizedImage} from "@angular/common";
+import {DatePipe, NgOptimizedImage, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {ActivatedRoute, Router} from "@angular/router";
 import {SmiteTwoGodService} from "../Services/smite-two-god.service";
 import {smiteTwoGodList} from "../Shared/mock-smiteTwoGod";
@@ -10,7 +10,10 @@ import {smiteTwoGodList} from "../Shared/mock-smiteTwoGod";
   selector: 'app-smite-gods-list-item',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    UpperCasePipe,
+    DatePipe,
+    TitleCasePipe
   ],
   templateUrl: './smite-gods-list-item.component.html',
   styleUrl: './smite-gods-list-item.component.css'

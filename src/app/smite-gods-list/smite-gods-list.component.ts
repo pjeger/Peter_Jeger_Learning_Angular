@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {smiteTwoGod} from "../Shared/Models/smiteTwoGod";
 import {SmiteGodsListItemComponent} from "../smite-gods-list-item/smite-gods-list-item.component";
-import {NgClass, NgForOf} from "@angular/common";
+import {DatePipe, NgClass, NgForOf, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {SmiteTwoGodService} from "../Services/smite-two-god.service";
 import {Router} from "@angular/router";
 
@@ -13,6 +13,9 @@ import {Router} from "@angular/router";
     SmiteGodsListItemComponent,
     NgForOf,
     NgClass,
+    DatePipe,
+    UpperCasePipe,
+    TitleCasePipe,
   ],
   styleUrl: './smite-gods-list.component.css'
 })

@@ -1,9 +1,9 @@
 <div class="smite-god-container" *ngFor="let smiteTwoGod of smiteTwoGodList">
-  <h1>{{smiteTwoGod.name}}</h1>
+  <h1>{{smiteTwoGod.name | titlecase}}</h1>
   <p>{{smiteTwoGod.id}}</p>
   <p>{{smiteTwoGod.pantheon}}</p>
-  <p>{{smiteTwoGod.class}}</p>
-  <p>{{smiteTwoGod.releaseDate}}</p>
+  <p>{{smiteTwoGod.class | uppercase}}</p>
+  <p>{{smiteTwoGod.releaseDate | date: 'mediumDate'}}</p>
   <p>Has kit changes?: {{smiteTwoGod.kitChanges}}</p>
   <img src='{{smiteTwoGod.image}}' height="200px" width="200px" alt="{{smiteTwoGod.name}}">
   <br>
