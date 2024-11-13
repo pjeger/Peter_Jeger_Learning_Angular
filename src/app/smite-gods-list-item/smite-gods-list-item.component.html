@@ -3,7 +3,7 @@
     <h4>{{smiteTwoGod?.pantheon | uppercase}}</h4>
     <p>{{smiteTwoGod | concat }}</p>
     <p>{{smiteTwoGod.releaseDate | date: 'mediumDate'}}</p>
-    <img src = "{{smiteTwoGod?.image}}"width="200" height="300">
+    <img src = "{{smiteTwoGod.image}}"width="200" height="300">
     <button type="button" (click)="onEdit()">Edit</button>
     <button type="button" (click)="onDelete(smiteTwoGod?.id)">Delete</button>
 </div>
