@@ -4,6 +4,7 @@ import {DatePipe, NgOptimizedImage, TitleCasePipe, UpperCasePipe} from "@angular
 import {ActivatedRoute, Router} from "@angular/router";
 import {SmiteTwoGodService} from "../Services/smite-two-god.service";
 import {smiteTwoGodList} from "../Shared/mock-smiteTwoGod";
+import {ConcatPipe} from "../concat.pipe";
 
 
 @Component({
@@ -13,7 +14,8 @@ import {smiteTwoGodList} from "../Shared/mock-smiteTwoGod";
     NgOptimizedImage,
     UpperCasePipe,
     DatePipe,
-    TitleCasePipe
+    TitleCasePipe,
+    ConcatPipe
   ],
   templateUrl: './smite-gods-list-item.component.html',
   styleUrl: './smite-gods-list-item.component.css'

@@ -4,6 +4,7 @@ import {SmiteGodsListItemComponent} from "../smite-gods-list-item/smite-gods-lis
 import {DatePipe, NgClass, NgForOf, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {SmiteTwoGodService} from "../Services/smite-two-god.service";
 import {Router} from "@angular/router";
+import {ConcatPipe} from "../concat.pipe";
 
 @Component({
   selector: 'app-smite-gods-list',
@@ -16,6 +17,7 @@ import {Router} from "@angular/router";
     DatePipe,
     UpperCasePipe,
     TitleCasePipe,
+    ConcatPipe,
   ],
   styleUrl: './smite-gods-list.component.css'
 })
